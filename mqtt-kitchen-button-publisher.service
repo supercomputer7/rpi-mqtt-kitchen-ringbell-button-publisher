@@ -1,0 +1,18 @@
+[Unit]
+Description=Kitchen MQTT Ring Publisher
+
+After=network.target
+
+[Service]
+ExecStart=/opt/mqtt_kitchen_button_publisher/publisher.py \ 
+          --mqtt-broker-ip MQTT_IP \
+          --mqtt-topic MQTT_TOPIC \
+          --mqtt-user MQTT_USER \
+          --mqtt-password MQTT_PASS \
+          --mqtt-published-data MQTT_DATA \
+          --gpio-pin-input GPIO_PIN
+Restart=always
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
