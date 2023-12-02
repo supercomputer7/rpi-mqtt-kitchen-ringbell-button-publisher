@@ -5,7 +5,7 @@
 ## How to use on the Raspberry Pi (Debian based OSes)
 
 ```sh
-sudo apt install libsystemd-dev
+sudo apt install libsystemd-dev python3-systemd
 git clone https://github.com/supercomputer7/rpi-mqtt-kitchen-ringbell-button-publisher
 cd rpi-mqtt-kitchen-ringbell-button-publisher
 sudo python3 -m pip install -r requirements.txt
